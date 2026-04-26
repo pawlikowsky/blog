@@ -13,7 +13,7 @@
     <published>2026-04-01T00:00:00Z</published>
     <updated>2026-04-01T00:00:00Z</updated>
     <author><name>PepeCodes</name></author>
-    <summary>Testowy wpis prezentujący możliwości generatora — nagłówki, listy, bloki kodu z kolorowaniem składni, cytaty i tabele. Testowy wpis prezentujący możliwości generatora — nagłówki, listy, bloki kodu z kolorowaniem składni, cytaty i tabele. Testowy wpis prezentujący możliwości generatora — nagłówki, listy, bloki kodu z kolorowaniem składni, cytaty i tabele. Testowy wpis prezentujący możliwości generatora — nagłówki, listy, bloki kodu z kolorowaniem składni, cytaty i tabele.</summary>
+    <summary>Testowy wpis prezentujący możliwości generatora — nagłówki, listy, bloki kodu z kolorowaniem składni, cytaty i tabele. Testowy wpis prezentujący możliwości...</summary>
     <content type="html"><![CDATA[<p>Witaj na blogu. To jest pierwszy wpis wygenerowany przez <strong>zsbg</strong> — statyczny generator stron oparty na Jinja2 i Markdownie.</p>
 <h2 id="bloki-kodu">Bloki kodu</h2>
 <p>Generator używa Pygments do kolorowania składni. Wystarczy oznaczyć blok trzema backtickamy i podać język.</p>
