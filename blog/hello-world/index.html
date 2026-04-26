@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Engineer by Mateusz Pawlikowski - on Python, AI, and software engineering. | Hello, World — pierwszy wpis na blogu</title>
+    <link rel="alternate" type="application/atom+xml" href="/feed.xml" title="The Engineer by Mateusz Pawlikowski - on Python, AI, and software engineering. — Blog">
+    
+    <meta name="description" content="Testowy wpis prezentujący możliwości generatora — nagłówki, listy, bloki kodu z kolorowaniem składni, cytaty i tabele. Testowy wpis prezentujący możliwości generatora — nagłówki, listy, bloki kodu z kolorowaniem składni, cytaty i tabele. Testowy wpis prezentujący możliwości generatora — nagłówki, listy, bloki kodu z kolorowaniem składni, cytaty i tabele. Testowy wpis prezentujący możliwości generatora — nagłówki, listy, bloki kodu z kolorowaniem składni, cytaty i tabele.">
+    <meta name="keywords" content="python, zsbg, test">
+    <link rel="canonical" href="/blog/hello-world/">
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Hello, World — pierwszy wpis na blogu">
+    <meta property="og:description" content="Testowy wpis prezentujący możliwości generatora — nagłówki, listy, bloki kodu z kolorowaniem składni, cytaty i tabele. Testowy wpis prezentujący możliwości generatora — nagłówki, listy, bloki kodu z kolorowaniem składni, cytaty i tabele. Testowy wpis prezentujący możliwości generatora — nagłówki, listy, bloki kodu z kolorowaniem składni, cytaty i tabele. Testowy wpis prezentujący możliwości generatora — nagłówki, listy, bloki kodu z kolorowaniem składni, cytaty i tabele.">
+    <meta property="og:url" content="/blog/hello-world/">
+    <meta property="og:site_name" content="The Engineer by Mateusz Pawlikowski - on Python, AI, and software engineering.">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Hello, World — pierwszy wpis na blogu">
+    <meta name="twitter:description" content="Testowy wpis prezentujący możliwości generatora — nagłówki, listy, bloki kodu z kolorowaniem składni, cytaty i tabele. Testowy wpis prezentujący możliwości generatora — nagłówki, listy, bloki kodu z kolorowaniem składni, cytaty i tabele. Testowy wpis prezentujący możliwości generatora — nagłówki, listy, bloki kodu z kolorowaniem składni, cytaty i tabele. Testowy wpis prezentujący możliwości generatora — nagłówki, listy, bloki kodu z kolorowaniem składni, cytaty i tabele.">
+    
+    <meta property="article:published_time" content="2026-04-01">
+    <meta property="article:author" content="PepeCodes">
+    <meta property="article:tag" content="python">
+    <meta property="article:tag" content="zsbg">
+    <meta property="article:tag" content="test">
+    
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Hello, World — pierwszy wpis na blogu", "description": "Testowy wpis prezentujący możliwości generatora — nagłówki, listy, bloki kodu z kolorowaniem składni, cytaty i tabele. Testowy wpis prezentujący możliwości generatora — nagłówki, listy, bloki kodu z kolorowaniem składni, cytaty i tabele. Testowy wpis prezentujący możliwości generatora — nagłówki, listy, bloki kodu z kolorowaniem składni, cytaty i tabele. Testowy wpis prezentujący możliwości generatora — nagłówki, listy, bloki kodu z kolorowaniem składni, cytaty i tabele.", "datePublished": "2026-04-01", "author": {"@type": "Person", "name": "PepeCodes"}, "url": "/blog/hello-world/", "keywords": "python, zsbg, test", "publisher": {"@type": "Person", "name": "The Engineer by Mateusz Pawlikowski - on Python, AI, and software engineering."}}</script>
+    
+    <style>
+        :root {
+            --bg: #ffffff;
+            --bg-secondary: #f9fafb;
+            --text: #111827;
+            --text-secondary: #6b7280;
+            --text-muted: #9ca3af;
+            --accent: #2563eb;
+            --accent-hover: #1d4ed8;
+            --border: #e5e7eb;
+            --code-bg: #f3f4f6;
+            --code-text: #1f2937;
+            --tag-bg: #f3f4f6;
+            --tag-text: #374151;
+            --tag-accent: #2563eb;
+            --shadow: 0 1px 3px rgba(0,0,0,0.06);
+        }
+
+        html[data-theme="dark"] {
+            --bg: #0f1117;
+            --bg-secondary: #161b22;
+            --text: #e6edf3;
+            --text-secondary: #8b949e;
+            --text-muted: #6e7781;
+            --accent: #58a6ff;
+            --accent-hover: #79b8ff;
+            --border: #21262d;
+            --code-bg: #161b22;
+            --code-text: #e6edf3;
+            --tag-bg: #161b22;
+            --tag-text: #c9d1d9;
+            --tag-accent: #58a6ff;
+            --shadow: 0 1px 3px rgba(0,0,0,0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        .site-header {
+            padding: 48px 0 32px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .site-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: min(960px, calc(100% - 48px));
+            height: 1px;
+            background: var(--border);
+        }
+
+        .site-header > .container > div:first-child {
+            margin-bottom: 16px;
+        }
+
+        .site-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            text-decoration: none;
+            letter-spacing: -0.03em;
+        }
+
+        .site-name:hover {
+            color: var(--accent);
+        }
+
+        .site-tagline {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .navbar-link {
+            font-size: 0.95rem;
+            color: var(--text);
+            text-decoration: none;
+            transition: color 0.15s;
+            font-weight: 500;
+        }
+
+        .navbar-link:hover {
+            color: var(--accent);
+        }
+
+        .btn-theme {
+            margin-left: auto;
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            font-size: 1.1rem;
+            padding: 4px;
+            border-radius: 6px;
+            transition: color 0.15s, background-color 0.15s;
+            line-height: 1;
+        }
+
+        .btn-theme:hover {
+            color: var(--text);
+            background-color: var(--bg-secondary);
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--accent-hover);
+        }
+
+        /* Tags */
+        .post-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            background: var(--tag-bg);
+            border-radius: 4px;
+            padding: 2px 8px;
+            color: var(--tag-text);
+            transition: background-color 0.15s, color 0.15s;
+        }
+
+        .tag::before {
+            content: "#";
+            color: var(--tag-accent);
+            margin-right: 1px;
+        }
+
+        /* Code blocks — always dark background for Monokai colors */
+        .highlight {
+            background: #1e1e2e !important;
+            border-radius: 8px;
+        }
+
+        .highlight pre {
+            background: transparent !important;
+            color: #cdd6f4 !important;
+        }
+
+        .highlight .c, .highlight .cm, .highlight .c1, .highlight .ch, .highlight .cp, .highlight .cpf, .highlight .cs, .highlight .gu { color: #6c7086 !important; }
+        .highlight .k, .highlight .kc, .highlight .kd, .highlight .kp, .highlight .kr, .highlight .kt { color: #cba6f7 !important; }
+        .highlight .s, .highlight .sa, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .se, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss, .highlight .ld { color: #a6e3a1 !important; }
+        .highlight .n, .highlight .nx, .highlight .nb, .highlight .bp, .highlight .py, .highlight .nv, .highlight .ni, .highlight .nl, .highlight .nn, .highlight .w, .highlight .esc, .highlight .g, .highlight .gr, .highlight .gh, .highlight .gs, .highlight .gt { color: #cdd6f4 !important; }
+        .highlight .o, .highlight .ow, .highlight .kn, .highlight .nt, .highlight .gd, .highlight .gp { color: #f38ba8 !important; }
+        .highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .mo, .highlight .l, .highlight .ae { color: #fab387 !important; }
+        .highlight .na, .highlight .nc, .highlight .nd, .highlight .ne, .highlight .nf, .highlight .fm { color: #89b4fa !important; }
+        .highlight .no { color: #89dceb !important; }
+        .highlight .gi { color: #a6e3a1 !important; }
+        .highlight .go { color: #89b4fa !important; }
+        .highlight .hll { background-color: #313244 !important; }
+        .highlight .err { color: #f38ba8 !important; background-color: #311b2e !important; }
+        .highlight .ge { color: #cdd6f4 !important; font-style: italic; }
+        .highlight .ges { color: #cdd6f4 !important; font-weight: bold; font-style: italic; }
+
+        /* Footer */
+        .site-footer {
+            padding: 40px 0;
+            margin-top: 60px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            position: relative;
+        }
+
+        .site-footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: min(960px, calc(100% - 48px));
+            height: 1px;
+            background: var(--border);
+        }
+
+        
+        /* Back link */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            transition: color 0.15s;
+        }
+
+        .back-link:hover {
+            color: var(--accent);
+        }
+
+        /* Article header */
+        .article-header {
+            margin-bottom: 36px;
+        }
+
+        .article-title {
+            font-size: 2.4rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        /* Article content */
+        .article-content {
+            font-size: 1rem;
+            line-height: 1.75;
+            color: var(--text);
+        }
+
+        .article-content p {
+            margin-bottom: 20px;
+        }
+
+        .article-content ul,
+        .article-content ol {
+            margin: 0 0 20px 1.5rem;
+            padding: 0;
+        }
+
+        .article-content li {
+            margin-bottom: 6px;
+        }
+
+        .article-content h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin: 40px 0 16px;
+        }
+
+        .article-content h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin: 28px 0 12px;
+        }
+
+        /* Inline code */
+        .article-content code {
+            background: var(--code-bg);
+            border-radius: 4px;
+            padding: 2px 6px;
+            font-size: 0.88em;
+            color: var(--code-text);
+            font-family: 'SF Mono', 'Fira Code', monospace;
+        }
+
+        /* Pygments-rendered code blocks */
+        .article-content .highlight {
+            background: var(--code-bg);
+            border-radius: 8px;
+            margin: 24px 0;
+            overflow: hidden;
+        }
+
+        .article-content .highlight pre {
+            padding: 20px;
+            overflow-x: auto;
+            font-size: 0.85rem;
+            line-height: 1.7;
+            margin: 0;
+            background: transparent;
+            white-space: pre;
+        }
+
+        .article-content .highlight code {
+            background: transparent;
+            border: none;
+            padding: 0;
+            font-size: inherit;
+            color: inherit;
+        }
+
+        /* Blockquote */
+        .article-content blockquote {
+            border-left: 3px solid var(--accent);
+            padding: 12px 20px;
+            margin: 24px 0;
+            background: var(--bg-secondary);
+            color: var(--text-secondary);
+            border-radius: 0 6px 6px 0;
+        }
+
+        /* Divider */
+        .article-content hr {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 40px 0;
+        }
+
+        /* Article footer */
+        .article-footer {
+            margin-top: 48px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .article-footer a {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            transition: color 0.15s;
+        }
+
+        .article-footer a:hover {
+            color: var(--accent);
+        }
+
+        .nav-prev::before { content: "← "; }
+        .nav-next::after  { content: " →"; }
+
+        @media (max-width: 600px) {
+            .article-title { font-size: 1.5rem; }
+        }
+
+    </style>
+    <link rel="stylesheet" href="/static/pygments.css">
+    <script>
+        (function() {
+            const t = localStorage.getItem('theme');
+            if (t) document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <div>
+            <a href="" class="site-name">The Engineer by Mateusz Pawlikowski - on Python, AI, and software engineering.</a>
+            <div class="site-tagline"># Thoughts, rants, and occasional wisdom</div>
+        </div>
+        <nav class="navbar">
+            
+            
+            <a href="/about/" class="navbar-link">About</a>
+            
+            
+            <button class="btn-theme" onclick="toggleTheme()" aria-label="Toggle theme">☀</button>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    
+        <a href="/blog/" class="back-link">← Back to blog</a>
+
+        <header class="article-header">
+            <h1 class="article-title">Hello, World — pierwszy wpis na blogu</h1>
+            <div class="article-meta">
+                <span class="meta-date">2026-04-01</span>
+                <span class="meta-author">PepeCodes</span>
+                <span class="meta-read">1 min read</span>
+            </div>
+            <div class="post-tags">
+                
+                <span class="tag">python</span>
+                
+                <span class="tag">zsbg</span>
+                
+                <span class="tag">test</span>
+                
+            </div>
+        </header>
+
+        <div class="article-content">
+            <p>Witaj na blogu. To jest pierwszy wpis wygenerowany przez <strong>zsbg</strong> — statyczny generator stron oparty na Jinja2 i Markdownie.</p>
+<h2 id="bloki-kodu">Bloki kodu</h2>
+<p>Generator używa Pygments do kolorowania składni. Wystarczy oznaczyć blok trzema backtickamy i podać język.</p>
+<h3 id="python">Python</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">zsbg.generator</span><span class="w"> </span><span class="kn">import</span> <span class="n">Generator</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+
+<span class="n">Generator</span><span class="p">(</span>
+    <span class="n">content_dir</span><span class="o">=</span><span class="n">Path</span><span class="p">(</span><span class="s2">&quot;content&quot;</span><span class="p">),</span>
+    <span class="n">output_dir</span><span class="o">=</span><span class="n">Path</span><span class="p">(</span><span class="s2">&quot;output&quot;</span><span class="p">),</span>
+    <span class="n">templates_dir</span><span class="o">=</span><span class="n">Path</span><span class="p">(</span><span class="s2">&quot;templates&quot;</span><span class="p">),</span>
+    <span class="n">pygments_style</span><span class="o">=</span><span class="s2">&quot;monokai&quot;</span><span class="p">,</span>
+<span class="p">)</span><span class="o">.</span><span class="n">build</span><span class="p">()</span>
+</code></pre></div>
+
+<h3 id="sql">SQL</h3>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
+<span class="w">    </span><span class="n">p</span><span class="p">.</span><span class="n">name</span><span class="p">,</span>
+<span class="w">    </span><span class="k">COUNT</span><span class="p">(</span><span class="n">o</span><span class="p">.</span><span class="n">id</span><span class="p">)</span><span class="w">        </span><span class="k">AS</span><span class="w"> </span><span class="n">order_count</span><span class="p">,</span>
+<span class="w">    </span><span class="k">SUM</span><span class="p">(</span><span class="n">o</span><span class="p">.</span><span class="n">total_price</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">revenue</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">products</span><span class="w"> </span><span class="n">p</span>
+<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">orders</span><span class="w"> </span><span class="n">o</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">o</span><span class="p">.</span><span class="n">product_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">id</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">owner_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">42</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">name</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">revenue</span><span class="w"> </span><span class="k">DESC</span><span class="w"> </span><span class="n">NULLS</span><span class="w"> </span><span class="k">LAST</span><span class="p">;</span>
+</code></pre></div>
+
+<h3 id="bash">Bash</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Stwórz nowy wpis</span>
+zsbg<span class="w"> </span>new<span class="w"> </span>moj-nowy-wpis
+
+<span class="c1"># Zbuduj bloga</span>
+zsbg<span class="w"> </span>build<span class="w"> </span>--pygments-style<span class="w"> </span>github-dark
+</code></pre></div>
+
+<h2 id="formatowanie-tekstu">Formatowanie tekstu</h2>
+<p>Możesz używać <strong>pogrubienia</strong>, <em>kursywy</em> oraz <code>kodu inline</code> bezpośrednio w tekście.
+Linki wyglądają tak: <a href="https://pygments.org/styles/">Pygments styles</a>.</p>
+<h2 id="listy">Listy</h2>
+<p>Nieuporządkowana:</p>
+<ul>
+<li>Jinja2 — silnik szablonów</li>
+<li>python-frontmatter — parsowanie metadanych YAML</li>
+<li>Markdown — konwersja do HTML</li>
+<li>Pygments — kolorowanie składni</li>
+<li>Click — interfejs CLI</li>
+<li>Pydantic v2 — walidacja modeli danych</li>
+</ul>
+<p>Uporządkowana:</p>
+<ol>
+<li>Napisz wpis w Markdownie</li>
+<li>Uruchom <code>zsbg build</code></li>
+<li>Wdróż katalog <code>output/</code> na serwer</li>
+</ol>
+<h2 id="cytat">Cytat</h2>
+<blockquote>
+<p>Premature optimization is the root of all evil.</p>
+<p>— Donald Knuth</p>
+</blockquote>
+<h2 id="tabela">Tabela</h2>
+<table>
+<thead>
+<tr>
+<th>Komenda</th>
+<th>Opis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>zsbg build</code></td>
+<td>Buduje całego bloga</td>
+</tr>
+<tr>
+<td><code>zsbg new &lt;slug&gt;</code></td>
+<td>Tworzy szkielet nowego wpisu</td>
+</tr>
+<tr>
+<td><code>zsbg build --help</code></td>
+<td>Wyświetla dostępne opcje</td>
+</tr>
+</tbody>
+</table>
+<h2 id="kod-inline-w-tekscie">Kod inline w tekście</h2>
+<p>Żeby zobaczyć jakie zapytania wykonuje Django, ustaw <code>django.db.backends</code> na poziom <code>DEBUG</code>
+w konfiguracji <code>LOGGING</code>. Nie rób tego na produkcji.</p>
+<hr />
+<p>To tyle na dziś. Generator działa — możesz zacząć pisać.</p>
+        </div>
+
+        <footer class="article-footer">
+            
+            <span></span>
+            
+            
+        </footer>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        The Engineer by Mateusz Pawlikowski - on Python, AI, and software engineering.
+    </div>
+</footer>
+
+<script>
+    function toggleTheme() {
+        const html = document.documentElement;
+        const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        updateThemeBtn();
+    }
+
+    function updateThemeBtn() {
+        const btn = document.querySelector('.btn-theme');
+        if (btn) btn.textContent = document.documentElement.getAttribute('data-theme') === 'dark' ? '☾' : '☀';
+    }
+
+    updateThemeBtn();
+</script>
+
+
+</body>
+</html>
+</body>
+</html>
