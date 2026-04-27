@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Engineer by Mateusz Pawlikowski - on Python, AI, and software engineering. | Hello, World — pierwszy wpis na blogu</title>
     <meta name="generator" content="zsbg">
-    <link rel="alternate" type="application/atom+xml" href="https://pawlikowski.me/feed.xml" title="The Engineer by Mateusz Pawlikowski - on Python, AI, and software engineering. — Blog">
+    <link rel="alternate" type="application/atom+xml" href="/feed.xml" title="The Engineer by Mateusz Pawlikowski - on Python, AI, and software engineering. — Blog">
     
     <meta name="description" content="Testowy wpis prezentujący możliwości generatora — nagłówki, listy, bloki kodu z kolorowaniem składni, cytaty i tabele. Testowy wpis prezentujący możliwości...">
     <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
     <meta name="author" content="PepeCodes">
     <meta name="keywords" content="python, zsbg, test">
-    <link rel="canonical" href="https://pawlikowski.me/blog/hello-world/">
+    <link rel="canonical" href="/blog/hello-world/">
     <!-- Open Graph -->
     <meta property="og:type" content="article">
     <meta property="og:title" content="Hello, World — pierwszy wpis na blogu">
     <meta property="og:description" content="Testowy wpis prezentujący możliwości generatora — nagłówki, listy, bloki kodu z kolorowaniem składni, cytaty i tabele. Testowy wpis prezentujący możliwości...">
-    <meta property="og:url" content="https://pawlikowski.me/blog/hello-world/">
+    <meta property="og:url" content="/blog/hello-world/">
     <meta property="og:site_name" content="The Engineer by Mateusz Pawlikowski - on Python, AI, and software engineering.">
     <meta property="og:locale" content="en_US">
     
@@ -35,7 +35,7 @@
     <meta property="article:tag" content="zsbg">
     <meta property="article:tag" content="test">
     
-    <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "name": "The Engineer by Mateusz Pawlikowski - on Python, AI, and software engineering.", "url": "https://pawlikowski.me/", "description": "Articles and notes published on The Engineer by Mateusz Pawlikowski - on Python, AI, and software engineering.", "inLanguage": "en-US"}, {"@type": "BlogPosting", "headline": "Hello, World — pierwszy wpis na blogu", "description": "Testowy wpis prezentujący możliwości generatora — nagłówki, listy, bloki kodu z kolorowaniem składni, cytaty i tabele. Testowy wpis prezentujący możliwości...", "datePublished": "2026-04-01", "dateModified": "2026-04-01", "author": {"@type": "Person", "name": "PepeCodes"}, "url": "https://pawlikowski.me/blog/hello-world/", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://pawlikowski.me/blog/hello-world/"}, "keywords": ["python", "zsbg", "test"], "wordCount": 276, "timeRequired": "PT1M", "inLanguage": "en-US", "publisher": {"@type": "Organization", "name": "The Engineer by Mateusz Pawlikowski - on Python, AI, and software engineering.", "url": "https://pawlikowski.me/"}}]}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "name": "The Engineer by Mateusz Pawlikowski - on Python, AI, and software engineering.", "url": "/", "description": "Articles and notes published on The Engineer by Mateusz Pawlikowski - on Python, AI, and software engineering.", "inLanguage": "en-US"}, {"@type": "BlogPosting", "headline": "Hello, World — pierwszy wpis na blogu", "description": "Testowy wpis prezentujący możliwości generatora — nagłówki, listy, bloki kodu z kolorowaniem składni, cytaty i tabele. Testowy wpis prezentujący możliwości...", "datePublished": "2026-04-01", "dateModified": "2026-04-01", "author": {"@type": "Person", "name": "PepeCodes"}, "url": "/blog/hello-world/", "mainEntityOfPage": {"@type": "WebPage", "@id": "/blog/hello-world/"}, "keywords": ["python", "zsbg", "test"], "wordCount": 276, "timeRequired": "PT1M", "inLanguage": "en-US", "publisher": {"@type": "Organization", "name": "The Engineer by Mateusz Pawlikowski - on Python, AI, and software engineering.", "url": "/"}}]}</script>
     
     <style>
         :root {
@@ -226,6 +226,98 @@
         .highlight .err { color: #f38ba8 !important; background-color: #311b2e !important; }
         .highlight .ge { color: #cdd6f4 !important; font-style: italic; }
         .highlight .ges { color: #cdd6f4 !important; font-weight: bold; font-style: italic; }
+
+        /* Markdown tables */
+        .article-content table,
+        .page-content table {
+            display: block;
+            width: max-content;
+            max-width: 100%;
+            min-width: 100%;
+            margin: 24px 0;
+            overflow-x: auto;
+            border-collapse: collapse;
+            border-spacing: 0;
+            background: var(--bg);
+        }
+
+        .article-content thead,
+        .page-content thead {
+            background: var(--bg-secondary);
+        }
+
+        .article-content th,
+        .article-content td,
+        .page-content th,
+        .page-content td {
+            padding: 12px 16px;
+            border: 1px solid var(--border);
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .article-content th,
+        .page-content th {
+            font-weight: 600;
+        }
+
+        .article-content tbody tr:nth-child(even),
+        .page-content tbody tr:nth-child(even) {
+            background: var(--bg-secondary);
+        }
+
+        /* Markdown task lists */
+        .article-content ul.task-list,
+        .page-content ul.task-list {
+            margin-left: 0;
+            list-style: none;
+        }
+
+        .article-content .task-list-item,
+        .page-content .task-list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .article-content .task-list-item input[type="checkbox"],
+        .page-content .task-list-item input[type="checkbox"] {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 1rem;
+            height: 1rem;
+            margin: 0.3rem 0 0;
+            border: 1px solid var(--border);
+            border-radius: 0.2rem;
+            background: var(--bg);
+            display: inline-grid;
+            place-content: center;
+            flex: 0 0 auto;
+            opacity: 1;
+        }
+
+        .article-content .task-list-item input[type="checkbox"]::before,
+        .page-content .task-list-item input[type="checkbox"]::before {
+            content: "";
+            width: 0.65rem;
+            height: 0.65rem;
+            transform: scale(0);
+            transition: transform 0.12s ease-in-out;
+            background-color: #16a34a;
+            clip-path: polygon(14% 44%, 0 59%, 41% 100%, 100% 19%, 84% 5%, 39% 62%);
+        }
+
+        .article-content .task-list-item input[type="checkbox"]:checked,
+        .page-content .task-list-item input[type="checkbox"]:checked {
+            border-color: #16a34a;
+            background: color-mix(in srgb, #16a34a 10%, var(--bg));
+        }
+
+        .article-content .task-list-item input[type="checkbox"]:checked::before,
+        .page-content .task-list-item input[type="checkbox"]:checked::before {
+            transform: scale(1);
+        }
 
         /* Footer */
         .site-footer {
@@ -422,6 +514,8 @@
             
             
             <a href="/about/" class="navbar-link">About</a>
+            
+            <a href="/road-to-zig/" class="navbar-link">Road To Zig</a>
             
             
             <button class="btn-theme" onclick="toggleTheme()" aria-label="Toggle theme">☀</button>

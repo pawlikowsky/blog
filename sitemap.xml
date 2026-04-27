@@ -9,14 +9,21 @@
   </url>
 
   <url>
-    <loc>https://pawlikowski.me/blog/hello-world/</loc>
-    <lastmod>2026-04-01</lastmod>
+    <loc>https://pawlikowski.me/blog/road-to-zig/</loc>
+    <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://pawlikowski.me/about/</loc>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://pawlikowski.me/road-to-zig/</loc>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

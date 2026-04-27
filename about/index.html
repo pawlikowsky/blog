@@ -220,6 +220,98 @@
         .highlight .ge { color: #cdd6f4 !important; font-style: italic; }
         .highlight .ges { color: #cdd6f4 !important; font-weight: bold; font-style: italic; }
 
+        /* Markdown tables */
+        .article-content table,
+        .page-content table {
+            display: block;
+            width: max-content;
+            max-width: 100%;
+            min-width: 100%;
+            margin: 24px 0;
+            overflow-x: auto;
+            border-collapse: collapse;
+            border-spacing: 0;
+            background: var(--bg);
+        }
+
+        .article-content thead,
+        .page-content thead {
+            background: var(--bg-secondary);
+        }
+
+        .article-content th,
+        .article-content td,
+        .page-content th,
+        .page-content td {
+            padding: 12px 16px;
+            border: 1px solid var(--border);
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .article-content th,
+        .page-content th {
+            font-weight: 600;
+        }
+
+        .article-content tbody tr:nth-child(even),
+        .page-content tbody tr:nth-child(even) {
+            background: var(--bg-secondary);
+        }
+
+        /* Markdown task lists */
+        .article-content ul.task-list,
+        .page-content ul.task-list {
+            margin-left: 0;
+            list-style: none;
+        }
+
+        .article-content .task-list-item,
+        .page-content .task-list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .article-content .task-list-item input[type="checkbox"],
+        .page-content .task-list-item input[type="checkbox"] {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 1rem;
+            height: 1rem;
+            margin: 0.3rem 0 0;
+            border: 1px solid var(--border);
+            border-radius: 0.2rem;
+            background: var(--bg);
+            display: inline-grid;
+            place-content: center;
+            flex: 0 0 auto;
+            opacity: 1;
+        }
+
+        .article-content .task-list-item input[type="checkbox"]::before,
+        .page-content .task-list-item input[type="checkbox"]::before {
+            content: "";
+            width: 0.65rem;
+            height: 0.65rem;
+            transform: scale(0);
+            transition: transform 0.12s ease-in-out;
+            background-color: #16a34a;
+            clip-path: polygon(14% 44%, 0 59%, 41% 100%, 100% 19%, 84% 5%, 39% 62%);
+        }
+
+        .article-content .task-list-item input[type="checkbox"]:checked,
+        .page-content .task-list-item input[type="checkbox"]:checked {
+            border-color: #16a34a;
+            background: color-mix(in srgb, #16a34a 10%, var(--bg));
+        }
+
+        .article-content .task-list-item input[type="checkbox"]:checked::before,
+        .page-content .task-list-item input[type="checkbox"]:checked::before {
+            transform: scale(1);
+        }
+
         /* Footer */
         .site-footer {
             padding: 40px 0;
@@ -378,6 +470,8 @@
             
             <a href="/about/" class="navbar-link">About</a>
             
+            <a href="/road-to-zig/" class="navbar-link">Road To Zig</a>
+            
             
             <button class="btn-theme" onclick="toggleTheme()" aria-label="Toggle theme">☀</button>
         </nav>
@@ -393,8 +487,14 @@
         </header>
 
         <div class="page-content">
-            <p>The views and content on this blog are solely my own private thoughts. They should not be associated with any entities or individuals I collaborate with.</p>
+            <p><strong>The views and content on this blog are solely my own private thoughts. They should not be associated with any entities or individuals I collaborate with.</strong></p>
 <hr />
+<p>Most of the content on this blog is not AI-generated. <strong>If any part of a post is created using an LLM, I will clearly state that at the beginning.</strong></p>
+<p>I&rsquo;m not an english native so sometimes I&rsquo;m using some AI tools for grammar checking or spelling for example Language Tools.</p>
+<hr />
+<p><strong>Something about me:</strong></p>
+<p>Hi, I&rsquo;m Mateusz. I&rsquo;m living in Poland. On a typical day I&rsquo;m working as a Python backend developer.</p>
+<p>Currently, after almost 10 years in the industry, I&rsquo;m quite bitter about the state of IT. </p>
 <p>If you want to contact with me you can write on:  <code>m@pawlikowski.me</code></p>
         </div>
 

@@ -4,106 +4,23 @@
   <link href="https://pawlikowski.me/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://pawlikowski.me/blog/"/>
   <id>https://pawlikowski.me/</id>
-  <updated>2026-04-01T00:00:00Z</updated>
+  <updated>2026-04-27T00:00:00Z</updated>
   
   <entry>
-    <title>Hello, World — pierwszy wpis na blogu</title>
-    <link href="https://pawlikowski.me/blog/hello-world/"/>
-    <id>https://pawlikowski.me/blog/hello-world/</id>
-    <published>2026-04-01T00:00:00Z</published>
-    <updated>2026-04-01T00:00:00Z</updated>
-    <author><name>PepeCodes</name></author>
-    <summary>Testowy wpis prezentujący możliwości generatora — nagłówki, listy, bloki kodu z kolorowaniem składni, cytaty i tabele. Testowy wpis prezentujący możliwości...</summary>
-    <content type="html"><![CDATA[<p>Witaj na blogu. To jest pierwszy wpis wygenerowany przez <strong>zsbg</strong> — statyczny generator stron oparty na Jinja2 i Markdownie.</p>
-<h2 id="bloki-kodu">Bloki kodu</h2>
-<p>Generator używa Pygments do kolorowania składni. Wystarczy oznaczyć blok trzema backtickamy i podać język.</p>
-<h3 id="python">Python</h3>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">zsbg.generator</span><span class="w"> </span><span class="kn">import</span> <span class="n">Generator</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
-
-<span class="n">Generator</span><span class="p">(</span>
-    <span class="n">content_dir</span><span class="o">=</span><span class="n">Path</span><span class="p">(</span><span class="s2">&quot;content&quot;</span><span class="p">),</span>
-    <span class="n">output_dir</span><span class="o">=</span><span class="n">Path</span><span class="p">(</span><span class="s2">&quot;output&quot;</span><span class="p">),</span>
-    <span class="n">templates_dir</span><span class="o">=</span><span class="n">Path</span><span class="p">(</span><span class="s2">&quot;templates&quot;</span><span class="p">),</span>
-    <span class="n">pygments_style</span><span class="o">=</span><span class="s2">&quot;monokai&quot;</span><span class="p">,</span>
-<span class="p">)</span><span class="o">.</span><span class="n">build</span><span class="p">()</span>
-</code></pre></div>
-
-<h3 id="sql">SQL</h3>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
-<span class="w">    </span><span class="n">p</span><span class="p">.</span><span class="n">name</span><span class="p">,</span>
-<span class="w">    </span><span class="k">COUNT</span><span class="p">(</span><span class="n">o</span><span class="p">.</span><span class="n">id</span><span class="p">)</span><span class="w">        </span><span class="k">AS</span><span class="w"> </span><span class="n">order_count</span><span class="p">,</span>
-<span class="w">    </span><span class="k">SUM</span><span class="p">(</span><span class="n">o</span><span class="p">.</span><span class="n">total_price</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">revenue</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">products</span><span class="w"> </span><span class="n">p</span>
-<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">orders</span><span class="w"> </span><span class="n">o</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">o</span><span class="p">.</span><span class="n">product_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">id</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">owner_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">42</span>
-<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">name</span>
-<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">revenue</span><span class="w"> </span><span class="k">DESC</span><span class="w"> </span><span class="n">NULLS</span><span class="w"> </span><span class="k">LAST</span><span class="p">;</span>
-</code></pre></div>
-
-<h3 id="bash">Bash</h3>
-<div class="highlight"><pre><span></span><code><span class="c1"># Stwórz nowy wpis</span>
-zsbg<span class="w"> </span>new<span class="w"> </span>moj-nowy-wpis
-
-<span class="c1"># Zbuduj bloga</span>
-zsbg<span class="w"> </span>build<span class="w"> </span>--pygments-style<span class="w"> </span>github-dark
-</code></pre></div>
-
-<h2 id="formatowanie-tekstu">Formatowanie tekstu</h2>
-<p>Możesz używać <strong>pogrubienia</strong>, <em>kursywy</em> oraz <code>kodu inline</code> bezpośrednio w tekście.
-Linki wyglądają tak: <a href="https://pygments.org/styles/">Pygments styles</a>.</p>
-<h2 id="listy">Listy</h2>
-<p>Nieuporządkowana:</p>
-<ul>
-<li>Jinja2 — silnik szablonów</li>
-<li>python-frontmatter — parsowanie metadanych YAML</li>
-<li>Markdown — konwersja do HTML</li>
-<li>Pygments — kolorowanie składni</li>
-<li>Click — interfejs CLI</li>
-<li>Pydantic v2 — walidacja modeli danych</li>
-</ul>
-<p>Uporządkowana:</p>
-<ol>
-<li>Napisz wpis w Markdownie</li>
-<li>Uruchom <code>zsbg build</code></li>
-<li>Wdróż katalog <code>output/</code> na serwer</li>
-</ol>
-<h2 id="cytat">Cytat</h2>
-<blockquote>
-<p>Premature optimization is the root of all evil.</p>
-<p>— Donald Knuth</p>
-</blockquote>
-<h2 id="tabela">Tabela</h2>
-<table>
-<thead>
-<tr>
-<th>Komenda</th>
-<th>Opis</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>zsbg build</code></td>
-<td>Buduje całego bloga</td>
-</tr>
-<tr>
-<td><code>zsbg new &lt;slug&gt;</code></td>
-<td>Tworzy szkielet nowego wpisu</td>
-</tr>
-<tr>
-<td><code>zsbg build --help</code></td>
-<td>Wyświetla dostępne opcje</td>
-</tr>
-</tbody>
-</table>
-<h2 id="kod-inline-w-tekscie">Kod inline w tekście</h2>
-<p>Żeby zobaczyć jakie zapytania wykonuje Django, ustaw <code>django.db.backends</code> na poziom <code>DEBUG</code>
-w konfiguracji <code>LOGGING</code>. Nie rób tego na produkcji.</p>
-<hr />
-<p>To tyle na dziś. Generator działa — możesz zacząć pisać.</p>]]></content>
-    <category term="python"/>
-    <category term="zsbg"/>
-    <category term="test"/>
+    <title>Road To Zig</title>
+    <link href="https://pawlikowski.me/blog/road-to-zig/"/>
+    <id>https://pawlikowski.me/blog/road-to-zig/</id>
+    <published>2026-04-27T00:00:00Z</published>
+    <updated>2026-04-27T00:00:00Z</updated>
+    <author><name>M</name></author>
+    <summary>My new personal project to learn at least one programming language that is not a pseudo-code language like Python.</summary>
+    <content type="html"><![CDATA[<p>So it happened. I decided to learn some real programming languages. My goal is to, in the next 6 months, get some proficiency in the Zig language. Why, Zig? Because why not? It looks like it has a nice community; it&rsquo;s called modern C. Why not Rust? Hmmm, I think Rust is a more mature and bigger language and also has a bigger ecosystem. But I want to try some bare-bones language that will force me to understand some elemental concepts of system-level programming. I don&rsquo;t need memory-safe abstractions.</p>
+<p>In the long term, I would like to utilize Zig skills in some game dev project, including building a custom game engine (2D). This idea has been in my head for some time, so this is addressing the itching.</p>
+<p>Also not saying that Rust will not be welcomed in the future here. Just not for now. </p>
+<p>I created a dedicated page on this blog, Road to Zig, where, with the help of the LLM model (Qwen 3.6 plus), I generated some basic roadmaps for Zig concepts. I don&rsquo;t know if this is a valid roadmap. Furthermore, I will validate it by myself, and of course I will update the content if needed. If you want to use this roadmap, please be informed that this roadmap was created with LLM and is currently not validated, as I have 0 experience with Zig or any other low-level language like C or C++. So if you ask me, I would not be surprised if in the roadmap are some references to nonexistent resources or Zig concepts. Beauty of LLMs and trillion-dollar statistic technology.</p>]]></content>
+    <category term="zig"/>
+    <category term="roadmap"/>
+    <category term="programming"/>
     
   </entry>
   

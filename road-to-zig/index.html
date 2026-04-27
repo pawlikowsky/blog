@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Engineer by Mateusz Pawlikowski - on Python, AI, and software engineering. | Road To Zig</title>
+    <meta name="generator" content="zsbg">
+    <link rel="alternate" type="application/atom+xml" href="https://pawlikowski.me/feed.xml" title="The Engineer by Mateusz Pawlikowski - on Python, AI, and software engineering. — Blog">
+    
+    <meta name="description" content="My Roadmap to Zig">
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+    <meta name="author" content="M">
+    
+    <link rel="canonical" href="https://pawlikowski.me/road-to-zig/">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Road To Zig">
+    <meta property="og:description" content="My Roadmap to Zig">
+    <meta property="og:url" content="https://pawlikowski.me/road-to-zig/">
+    <meta property="og:site_name" content="The Engineer by Mateusz Pawlikowski - on Python, AI, and software engineering.">
+    <meta property="og:locale" content="en_US">
+    
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Road To Zig">
+    <meta name="twitter:description" content="My Roadmap to Zig">
+    
+    
+    
+    <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "name": "The Engineer by Mateusz Pawlikowski - on Python, AI, and software engineering.", "url": "https://pawlikowski.me/", "description": "Articles and notes published on The Engineer by Mateusz Pawlikowski - on Python, AI, and software engineering.", "inLanguage": "en-US"}, {"@type": "WebPage", "name": "Road To Zig", "description": "My Roadmap to Zig", "url": "https://pawlikowski.me/road-to-zig/", "inLanguage": "en-US", "author": {"@type": "Person", "name": "M"}, "isPartOf": {"@id": "https://pawlikowski.me/"}}]}</script>
+    
+    <style>
+        :root {
+            --bg: #ffffff;
+            --bg-secondary: #f9fafb;
+            --text: #111827;
+            --text-secondary: #6b7280;
+            --text-muted: #9ca3af;
+            --accent: #2563eb;
+            --accent-hover: #1d4ed8;
+            --border: #e5e7eb;
+            --code-bg: #f3f4f6;
+            --code-text: #1f2937;
+            --tag-bg: #f3f4f6;
+            --tag-text: #374151;
+            --tag-accent: #2563eb;
+            --shadow: 0 1px 3px rgba(0,0,0,0.06);
+        }
+
+        html[data-theme="dark"] {
+            --bg: #0f1117;
+            --bg-secondary: #161b22;
+            --text: #e6edf3;
+            --text-secondary: #8b949e;
+            --text-muted: #6e7781;
+            --accent: #58a6ff;
+            --accent-hover: #79b8ff;
+            --border: #21262d;
+            --code-bg: #161b22;
+            --code-text: #e6edf3;
+            --tag-bg: #161b22;
+            --tag-text: #c9d1d9;
+            --tag-accent: #58a6ff;
+            --shadow: 0 1px 3px rgba(0,0,0,0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        .site-header {
+            padding: 48px 0 32px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .site-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: min(960px, calc(100% - 48px));
+            height: 1px;
+            background: var(--border);
+        }
+
+        .site-header > .container > div:first-child {
+            margin-bottom: 16px;
+        }
+
+        .site-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            text-decoration: none;
+            letter-spacing: -0.03em;
+        }
+
+        .site-name:hover {
+            color: var(--accent);
+        }
+
+        .site-tagline {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .navbar-link {
+            font-size: 0.95rem;
+            color: var(--text);
+            text-decoration: none;
+            transition: color 0.15s;
+            font-weight: 500;
+        }
+
+        .navbar-link:hover {
+            color: var(--accent);
+        }
+
+        .btn-theme {
+            margin-left: auto;
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            font-size: 1.1rem;
+            padding: 4px;
+            border-radius: 6px;
+            transition: color 0.15s, background-color 0.15s;
+            line-height: 1;
+        }
+
+        .btn-theme:hover {
+            color: var(--text);
+            background-color: var(--bg-secondary);
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--accent-hover);
+        }
+
+        /* Tags */
+        .post-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            background: var(--tag-bg);
+            border-radius: 4px;
+            padding: 2px 8px;
+            color: var(--tag-text);
+            transition: background-color 0.15s, color 0.15s;
+        }
+
+        .tag::before {
+            content: "#";
+            color: var(--tag-accent);
+            margin-right: 1px;
+        }
+
+        /* Code blocks — always dark background for Monokai colors */
+        .highlight {
+            background: #1e1e2e !important;
+            border-radius: 8px;
+        }
+
+        .highlight pre {
+            background: transparent !important;
+            color: #cdd6f4 !important;
+        }
+
+        .highlight .c, .highlight .cm, .highlight .c1, .highlight .ch, .highlight .cp, .highlight .cpf, .highlight .cs, .highlight .gu { color: #6c7086 !important; }
+        .highlight .k, .highlight .kc, .highlight .kd, .highlight .kp, .highlight .kr, .highlight .kt { color: #cba6f7 !important; }
+        .highlight .s, .highlight .sa, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .se, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss, .highlight .ld { color: #a6e3a1 !important; }
+        .highlight .n, .highlight .nx, .highlight .nb, .highlight .bp, .highlight .py, .highlight .nv, .highlight .ni, .highlight .nl, .highlight .nn, .highlight .w, .highlight .esc, .highlight .g, .highlight .gr, .highlight .gh, .highlight .gs, .highlight .gt { color: #cdd6f4 !important; }
+        .highlight .o, .highlight .ow, .highlight .kn, .highlight .nt, .highlight .gd, .highlight .gp { color: #f38ba8 !important; }
+        .highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .mo, .highlight .l, .highlight .ae { color: #fab387 !important; }
+        .highlight .na, .highlight .nc, .highlight .nd, .highlight .ne, .highlight .nf, .highlight .fm { color: #89b4fa !important; }
+        .highlight .no { color: #89dceb !important; }
+        .highlight .gi { color: #a6e3a1 !important; }
+        .highlight .go { color: #89b4fa !important; }
+        .highlight .hll { background-color: #313244 !important; }
+        .highlight .err { color: #f38ba8 !important; background-color: #311b2e !important; }
+        .highlight .ge { color: #cdd6f4 !important; font-style: italic; }
+        .highlight .ges { color: #cdd6f4 !important; font-weight: bold; font-style: italic; }
+
+        /* Markdown tables */
+        .article-content table,
+        .page-content table {
+            display: block;
+            width: max-content;
+            max-width: 100%;
+            min-width: 100%;
+            margin: 24px 0;
+            overflow-x: auto;
+            border-collapse: collapse;
+            border-spacing: 0;
+            background: var(--bg);
+        }
+
+        .article-content thead,
+        .page-content thead {
+            background: var(--bg-secondary);
+        }
+
+        .article-content th,
+        .article-content td,
+        .page-content th,
+        .page-content td {
+            padding: 12px 16px;
+            border: 1px solid var(--border);
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .article-content th,
+        .page-content th {
+            font-weight: 600;
+        }
+
+        .article-content tbody tr:nth-child(even),
+        .page-content tbody tr:nth-child(even) {
+            background: var(--bg-secondary);
+        }
+
+        /* Markdown task lists */
+        .article-content ul.task-list,
+        .page-content ul.task-list {
+            margin-left: 0;
+            list-style: none;
+        }
+
+        .article-content .task-list-item,
+        .page-content .task-list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .article-content .task-list-item input[type="checkbox"],
+        .page-content .task-list-item input[type="checkbox"] {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 1rem;
+            height: 1rem;
+            margin: 0.3rem 0 0;
+            border: 1px solid var(--border);
+            border-radius: 0.2rem;
+            background: var(--bg);
+            display: inline-grid;
+            place-content: center;
+            flex: 0 0 auto;
+            opacity: 1;
+        }
+
+        .article-content .task-list-item input[type="checkbox"]::before,
+        .page-content .task-list-item input[type="checkbox"]::before {
+            content: "";
+            width: 0.65rem;
+            height: 0.65rem;
+            transform: scale(0);
+            transition: transform 0.12s ease-in-out;
+            background-color: #16a34a;
+            clip-path: polygon(14% 44%, 0 59%, 41% 100%, 100% 19%, 84% 5%, 39% 62%);
+        }
+
+        .article-content .task-list-item input[type="checkbox"]:checked,
+        .page-content .task-list-item input[type="checkbox"]:checked {
+            border-color: #16a34a;
+            background: color-mix(in srgb, #16a34a 10%, var(--bg));
+        }
+
+        .article-content .task-list-item input[type="checkbox"]:checked::before,
+        .page-content .task-list-item input[type="checkbox"]:checked::before {
+            transform: scale(1);
+        }
+
+        /* Footer */
+        .site-footer {
+            padding: 40px 0;
+            margin-top: 60px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            position: relative;
+        }
+
+        .site-footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: min(960px, calc(100% - 48px));
+            height: 1px;
+            background: var(--border);
+        }
+
+        
+        /* Back link */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            transition: color 0.15s;
+        }
+
+        .back-link:hover {
+            color: var(--accent);
+        }
+
+        /* Page header */
+        .page-header {
+            margin-bottom: 36px;
+        }
+
+        .page-title {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.2;
+        }
+
+        /* Page content */
+        .page-content {
+            font-size: 1rem;
+            line-height: 1.75;
+            color: var(--text);
+        }
+
+        .page-content p {
+            margin-bottom: 20px;
+        }
+
+        .page-content ul,
+        .page-content ol {
+            margin: 0 0 20px 1.5rem;
+            padding: 0;
+        }
+
+        .page-content li {
+            margin-bottom: 6px;
+        }
+
+        .page-content h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin: 40px 0 16px;
+        }
+
+        .page-content h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin: 28px 0 12px;
+        }
+
+        .page-content code {
+            background: var(--code-bg);
+            border-radius: 4px;
+            padding: 2px 6px;
+            font-size: 0.88em;
+            color: var(--code-text);
+            font-family: 'SF Mono', 'Fira Code', monospace;
+        }
+
+        .page-content .highlight {
+            background: var(--code-bg);
+            border-radius: 8px;
+            margin: 24px 0;
+            overflow: hidden;
+        }
+
+        .page-content .highlight pre {
+            padding: 20px;
+            overflow-x: auto;
+            font-size: 0.85rem;
+            line-height: 1.7;
+            margin: 0;
+            background: transparent;
+            white-space: pre;
+        }
+
+        .page-content .highlight code {
+            background: transparent;
+            border: none;
+            padding: 0;
+            font-size: inherit;
+            color: inherit;
+        }
+
+        .page-content blockquote {
+            border-left: 3px solid var(--accent);
+            padding: 12px 20px;
+            margin: 24px 0;
+            background: var(--bg-secondary);
+            color: var(--text-secondary);
+            border-radius: 0 6px 6px 0;
+        }
+
+        .page-content hr {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 40px 0;
+        }
+
+        @media (max-width: 600px) {
+            .page-title { font-size: 1.5rem; }
+        }
+
+    </style>
+    <link rel="stylesheet" href="/static/pygments.css">
+    <script>
+        (function() {
+            const t = localStorage.getItem('theme');
+            if (t) document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <div>
+            <a href="/" class="site-name">The Engineer by Mateusz Pawlikowski - on Python, AI, and software engineering.</a>
+            <div class="site-tagline"># Thoughts, rants, and occasional wisdom</div>
+        </div>
+        <nav class="navbar">
+            
+            
+            <a href="/about/" class="navbar-link">About</a>
+            
+            <a href="/road-to-zig/" class="navbar-link">Road To Zig</a>
+            
+            
+            <button class="btn-theme" onclick="toggleTheme()" aria-label="Toggle theme">☀</button>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    
+        <a href="/blog/" class="back-link">← Back to blog</a>
+
+        <header class="page-header">
+            <h1 class="page-title">Road To Zig</h1>
+        </header>
+
+        <div class="page-content">
+            <p><strong>Content of this document was LLM generated</strong></p>
+<h2 id="description">Description</h2>
+<p>This is a living document and can be modified at any time.</p>
+<p><strong><em>This is my planned roadmap to get some Zig efficiency. I have no knowledge about Zig or any low-level programming language like C or C++. I was curious about learning some real programming language, so I asked LLM (Qwen 3.6 Plus) to generate me some roadmap for Zig. When I&rsquo;m writing this, I don&rsquo;t know if this road map is valid; it more or less looks like it, but I will be able to confirm this with time.</em></strong> </p>
+<p><strong><em>This document will be updated and redacted during my road to Zig. I will provide updates and modifications of content if needed. Also I will provide a progress status on top of this document.</em></strong></p>
+<p>~M</p>
+<hr />
+<h2 id="status">Status</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled checked/> Create the Roadmap. Project initialization. (27.04.2026)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Phase 1: System Fundamentals &amp; Zig Syntax (Weeks 1–3)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Phase 2: Memory Management &amp; Pointers (Weeks 4–6)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Phase 3: Build System, Tooling &amp; C Interop (Weeks 7–8)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Phase 4: Concurrency, Performance &amp; Advanced Topics (Weeks 9–11)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Phase 5: Projects &amp; Best Practices (Weeks 12–14)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Phase 6: Raylib &amp; Game Development (Weeks 15–18)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Finish (TBA)</li>
+</ul>
+<hr />
+<h1 id="roadmap-python-backend-developer-zig-game-development">🐍→⚡ Roadmap: Python Backend Developer → Zig &amp; Game Development</h1>
+<p>As a Python backend developer, you already understand algorithms, data structures, system architecture, API design, and debugging. The lack of low-level experience is your only gap. <strong>Zig is the ideal bridge</strong>: it enforces explicitness, removes &ldquo;magic,&rdquo; and teaches you how memory, compilation, and hardware actually work. </p>
+<p>Below is a structured, time-boxed roadmap tailored to your background, with curated resources, realistic estimates, and a dedicated <strong>Raylib/Game Dev extension</strong>.</p>
+<hr />
+<h2 id="timeframe-assumptions">📅 Timeframe &amp; Assumptions</h2>
+<ul>
+<li><strong>Duration:</strong> <code>3–5 months</code> at <code>10–15 hours/week</code></li>
+<li><strong>Goal:</strong> Write safe, performant system code, integrate with C, build CLI/network tools, and prototype a 2D game with Raylib</li>
+<li><strong>Prerequisites:</strong> Basic terminal/Git usage, familiarity with programming fundamentals</li>
+<li><strong>Note:</strong> Zig is pre-1.0. Syntax evolves, but core principles remain stable. This roadmap targets <strong>Zig 0.11+</strong> (current stable branch).</li>
+</ul>
+<hr />
+<h2 id="learning-phases">🗺️ Learning Phases</h2>
+<h3 id="phase-1-system-fundamentals-zig-syntax-weeks-13">🔹 Phase 1: System Fundamentals &amp; Zig Syntax (Weeks 1–3)</h3>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Details</th>
+<th>Why It Matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Execution model</td>
+<td>Compilation vs interpretation, linking, target triples</td>
+<td>Python runs on a VM; Zig compiles directly to machine code</td>
+</tr>
+<tr>
+<td>Types &amp; structs</td>
+<td>Integers, floats, enums, packed structs, alignment, padding</td>
+<td>Explicit sizes &amp; memory layout replace dynamic typing</td>
+</tr>
+<tr>
+<td>Control flow</td>
+<td><code>if</code>, <code>while</code>, <code>for</code>, <code>switch</code>, <code>defer</code>, <code>errdefer</code></td>
+<td><code>defer</code> replaces context managers; deterministic cleanup</td>
+</tr>
+<tr>
+<td>Error handling</td>
+<td><code>error</code> unions, <code>try</code>/<code>catch</code>, <code>unreachable</code>, error sets</td>
+<td>No exceptions; errors are first-class return values</td>
+</tr>
+<tr>
+<td>Compile-time</td>
+<td><code>comptime</code>, inline assembly, code generation</td>
+<td>Zero-cost metaprogramming without macros or runtime reflection</td>
+</tr>
+</tbody>
+</table>
+<p>📚 <strong>Resources:</strong></p>
+<ul>
+<li>📘 <a href="https://ziglang.org/documentation/master/">Zig Documentation</a></li>
+<li>🧩 <a href="https://github.com/ratfactor/ziglings">Ziglings Exercises</a> (Exercises 1–30)</li>
+<li>📖 <a href="https://learnxinyminutes.com/docs/zig/">Learn Zig in Y Minutes</a></li>
+</ul>
+<p>⏱️ <strong>Estimate:</strong> <code>20–30h</code></p>
+<hr />
+<h3 id="phase-2-memory-management-pointers-weeks-46">🔹 Phase 2: Memory Management &amp; Pointers (Weeks 4–6)</h3>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Details</th>
+<th>Why It Matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Allocators</td>
+<td><code>GeneralPurposeAllocator</code>, <code>ArenaAllocator</code>, <code>FixedBufferAllocator</code></td>
+<td>No GC; explicit lifetime management is mandatory</td>
+</tr>
+<tr>
+<td>Pointers &amp; slices</td>
+<td><code>*T</code>, <code>[*]T</code>, <code>[]T</code>, pointer arithmetic, null safety</td>
+<td>Slices replace Python lists/strings; bounds-checked in debug</td>
+</tr>
+<tr>
+<td>Strings &amp; formatting</td>
+<td><code>[]const u8</code>, UTF-8, <code>std.fmt</code>, slicing</td>
+<td>Immutable byte sequences; no hidden methods</td>
+</tr>
+<tr>
+<td>Memory safety</td>
+<td>Double-free, use-after-free, ASAN, debug build checks</td>
+<td>Zig catches UB at compile/runtime when possible</td>
+</tr>
+<tr>
+<td>Resource cleanup</td>
+<td><code>defer</code>/<code>errdefer</code> patterns, RAII equivalents</td>
+<td>Guaranteed cleanup even on early returns</td>
+</tr>
+</tbody>
+</table>
+<p>📚 <strong>Resources:</strong></p>
+<ul>
+<li>📘 <a href="https://ziglang.org/documentation/master/std/#std.mem">std.mem &amp; std.heap docs</a></li>
+<li>🧩 Ziglings Exercises 31–60</li>
+<li>🛠️ <code>zig build -Doptimize=Debug -Denable-sanitizers</code> (ASAN/UBSAN)</li>
+</ul>
+<p>⏱️ <strong>Estimate:</strong> <code>25–35h</code></p>
+<hr />
+<h3 id="phase-3-build-system-tooling-c-interop-weeks-78">🔹 Phase 3: Build System, Tooling &amp; C Interop (Weeks 7–8)</h3>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Details</th>
+<th>Why It Matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>build.zig</code></td>
+<td>Steps, dependencies, install paths, custom commands</td>
+<td>Replaces CMake/Make; fully integrated with Zig</td>
+</tr>
+<tr>
+<td>Package management</td>
+<td><code>build.zig.zon</code>, <code>zig fetch</code>, dependency resolution</td>
+<td>Modern Zig standard for external crates/libs</td>
+</tr>
+<tr>
+<td>C Interop</td>
+<td><code>@cImport</code>, <code>zig cc</code>, linking <code>.a/.so</code>, struct layout</td>
+<td>Zig is a &ldquo;better C&rdquo;; seamless zero-cost interop</td>
+</tr>
+<tr>
+<td>Cross-compilation</td>
+<td><code>-Dtarget</code>, musl, Windows, macOS, WebAssembly</td>
+<td>Single compiler for all platforms</td>
+</tr>
+<tr>
+<td>Debugging &amp; testing</td>
+<td><code>gdb</code>/<code>lldb</code>, <code>zig test</code>, <code>zig fmt</code>, CI integration</td>
+<td>Production-ready workflow from day one</td>
+</tr>
+</tbody>
+</table>
+<p>📚 <strong>Resources:</strong></p>
+<ul>
+<li>📘 <a href="https://ziglang.org/documentation/master/#Build-System">Zig Build System Docs</a></li>
+<li>📖 <a href="https://ziglang.org/documentation/master/#C-Interop">C Interoperability Guide</a></li>
+<li>🌐 <a href="https://pkg.zig.pm/">Official Package Registry</a></li>
+</ul>
+<p>⏱️ <strong>Estimate:</strong> <code>15–20h</code></p>
+<hr />
+<h3 id="phase-4-concurrency-performance-advanced-topics-weeks-911">🔹 Phase 4: Concurrency, Performance &amp; Advanced Topics (Weeks 9–11)</h3>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Details</th>
+<th>Why It Matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Threading</td>
+<td><code>std.Thread</code>, thread pools, mutexes, condition variables</td>
+<td>Explicit concurrency; no hidden schedulers</td>
+</tr>
+<tr>
+<td>Atomics &amp; lock-free</td>
+<td><code>std.atomic</code>, memory ordering, CAS</td>
+<td>High-performance concurrent data structures</td>
+</tr>
+<tr>
+<td>Async/Await</td>
+<td>Status: experimental, <code>std.async</code>, event loops</td>
+<td>Evolving; understand current limitations</td>
+</tr>
+<tr>
+<td>Performance</td>
+<td>Cache locality, SIMD, inlining, profiling</td>
+<td>Systems programming requires hardware awareness</td>
+</tr>
+<tr>
+<td>Testing &amp; CI</td>
+<td>Fuzzing, GitHub Actions, coverage, property-based testing</td>
+<td>Robust, automated validation</td>
+</tr>
+</tbody>
+</table>
+<p>📚 <strong>Resources:</strong></p>
+<ul>
+<li>📘 <a href="https://ziglang.org/documentation/master/std/#std.Thread">std.Thread &amp; std.atomic docs</a></li>
+<li>🎥 Zig Conference Talks (YouTube: <code>Zig Programming Language</code>)</li>
+<li>🛠️ <code>hyperfine</code>, <code>perf</code>, <code>tracy</code> for profiling</li>
+</ul>
+<p>⏱️ <strong>Estimate:</strong> <code>25–30h</code></p>
+<hr />
+<h3 id="phase-5-projects-best-practices-weeks-1214">🔹 Phase 5: Projects &amp; Best Practices (Weeks 12–14)</h3>
+<table>
+<thead>
+<tr>
+<th>Project</th>
+<th>Description</th>
+<th>Skills Practiced</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CLI Tool</td>
+<td>JSON/CSV parser, file I/O, flags, colored output</td>
+<td><code>std.io</code>, <code>std.process</code>, <code>build.zig</code></td>
+</tr>
+<tr>
+<td>Network Utility</td>
+<td>HTTP server, TCP listener, async socket handling</td>
+<td><code>std.net</code>, error unions, allocators</td>
+</tr>
+<tr>
+<td>Open Source</td>
+<td>Fix bug in <code>ziglang/zig</code> or community lib</td>
+<td>Code review, testing, CI/CD</td>
+</tr>
+</tbody>
+</table>
+<p>📚 <strong>Resources:</strong></p>
+<ul>
+<li>🌐 <a href="https://github.com/ziglang/zig/tree/master/lib">Zig Project Templates</a></li>
+<li>💬 <a href="https://discord.gg/ziglang">Zig Discord &amp; Forum</a></li>
+<li>📖 <a href="https://github.com/ziglang/zig/wiki">Zig Best Practices Wiki</a></li>
+</ul>
+<p>⏱️ <strong>Estimate:</strong> <code>30–40h</code></p>
+<hr />
+<h3 id="phase-6-raylib-game-development-weeks-1518">🎮 Phase 6: Raylib &amp; Game Development (Weeks 15–18)</h3>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Details</th>
+<th>Why It Matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Raylib integration</td>
+<td><code>zig cc</code>, <code>raylib.zig</code> bindings, <code>build.zig.zon</code></td>
+<td>Raylib is C; Zig wraps it with zero-cost interop</td>
+</tr>
+<tr>
+<td>Game loop &amp; timing</td>
+<td><code>GetFrameTime()</code>, fixed timestep, delta time, vsync</td>
+<td>Stable 60/144 FPS, deterministic physics</td>
+</tr>
+<tr>
+<td>2D/3D Math</td>
+<td>Vectors, matrices, quaternions, collision basics</td>
+<td>Raylib provides primitives; you&rsquo;ll need custom math helpers</td>
+</tr>
+<tr>
+<td>Custom allocators</td>
+<td>Frame arena, object pools, linear allocators</td>
+<td>Games cannot tolerate GC pauses; pools prevent fragmentation</td>
+</tr>
+<tr>
+<td>Asset management</td>
+<td>Loading/unloading, reference counting, streaming, <code>std.fs</code></td>
+<td>Prevent texture/sound leaks, enable fast level loading</td>
+</tr>
+<tr>
+<td>First prototype</td>
+<td>2D platformer or top-down shooter</td>
+<td>Practical integration of all previous phases</td>
+</tr>
+</tbody>
+</table>
+<p>📚 <strong>Resources:</strong></p>
+<ul>
+<li>🔗 <a href="https://github.com/Not-Nik/raylib-zig">raylib-zig (Not-Nik)</a> – most popular bindings</li>
+<li>🔗 <a href="https://www.raylib.com/">raylib.com</a> – official C documentation (base for interop)</li>
+<li>🔗 <a href="https://github.com/zig-gamedev">zig-gamedev</a> – ECS, renderers, physics examples</li>
+<li>📘 <em>Game Programming Patterns</em> (Robert Nystrom) – language-agnostic, perfect for Zig</li>
+<li>🎥 Zig Game Dev Talks &amp; Tutorials (YouTube)</li>
+</ul>
+<p>⏱️ <strong>Estimate:</strong> <code>20–30h</code></p>
+<hr />
+<h2 id="tools-environment">🧰 Tools &amp; Environment</h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>zig</code> (latest stable)</td>
+<td>Compiler, formatter, test runner, package manager</td>
+</tr>
+<tr>
+<td><code>zls</code></td>
+<td>Language Server (VSCode, Neovim, Emacs, Helix)</td>
+</tr>
+<tr>
+<td><code>gdb</code> / <code>lldb</code></td>
+<td>Debugging, breakpoints, memory inspection</td>
+</tr>
+<tr>
+<td><code>valgrind</code> / <code>ASAN</code></td>
+<td>Memory leak &amp; undefined behavior detection</td>
+</tr>
+<tr>
+<td><code>hyperfine</code> / <code>perf</code></td>
+<td>Benchmarking &amp; CPU profiling</td>
+</tr>
+<tr>
+<td><code>zig cc</code></td>
+<td>Drop-in C/C++ compiler replacement</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="common-pitfalls-for-python-developers">⚠️ Common Pitfalls for Python Developers</h2>
+<ol>
+<li><strong>No GC</strong> → Everything must be explicitly allocated/deallocated. Use <code>defer</code> and appropriate allocators.</li>
+<li><strong>No exceptions</strong> → Errors are return values. Use <code>try</code>/<code>catch</code> and <code>error</code> unions.</li>
+<li><strong>Strings are <code>[]const u8</code></strong> → No <code>.upper()</code>, <code>.split()</code>, etc. Use <code>std.mem</code>/<code>std.fmt</code>.</li>
+<li><strong>No hidden allocations</strong> → Even <code>[]T</code> appends may require an allocator. Explicitness is mandatory.</li>
+<li><strong><code>comptime</code> ≠ Python metaprogramming</strong> → Runs at compile time, zero runtime cost, but requires different mental model.</li>
+</ol>
+<hr />
+<h2 id="progress-tracking-certification">📈 Progress Tracking &amp; Certification</h2>
+<ul>
+<li>✅ Complete <strong>Ziglings</strong> (100 exercises)</li>
+<li>✅ Build <strong>3 projects</strong> with full <code>build.zig</code>, tests, and CI</li>
+<li>✅ Contribute to <strong>1 open-source</strong> Zig/Raylib project</li>
+<li>🏆 <strong>Certifications:</strong> None officially recognized. GitHub portfolio + active community contributions are highly valued.</li>
+</ul>
+<hr />
+<h2 id="next-steps">🚀 Next Steps</h2>
+<ol>
+<li>Install <code>zig</code> and <code>zls</code>, configure your IDE</li>
+<li>Complete Ziglings alongside the official docs</li>
+<li>Replace a Python CLI/script with Zig</li>
+<li>Join the Zig Discord/Forum and ask questions</li>
+<li>Track Zig releases (<code>0.11 → 0.12+</code>); update syntax as needed</li>
+</ol>
+<hr />
+<h2 id="quick-resource-index">📚 Quick Resource Index</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>📘 Official Docs</td>
+<td>https://ziglang.org/documentation/master/</td>
+</tr>
+<tr>
+<td>🧩 Exercises</td>
+<td>https://github.com/ratfactor/ziglings</td>
+</tr>
+<tr>
+<td>🎥 Talks/Tutorials</td>
+<td>YouTube: <code>Zig Programming Language</code></td>
+</tr>
+<tr>
+<td>💬 Community</td>
+<td>https://discord.gg/ziglang</td>
+</tr>
+<tr>
+<td>📖 Articles</td>
+<td>https://zig.news/</td>
+</tr>
+<tr>
+<td>🛠️ LSP</td>
+<td>https://github.com/zigtools/zls</td>
+</tr>
+<tr>
+<td>🌐 Packages</td>
+<td>https://pkg.zig.pm/</td>
+</tr>
+<tr>
+<td>🎮 Raylib Bindings</td>
+<td>https://github.com/Not-Nik/raylib-zig</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="final-tips">💡 Final Tips</h2>
+<ul>
+<li><strong>Code daily</strong> (even 30 min). Zig requires muscle memory for pointers, allocators, and types.</li>
+<li><strong>Don&rsquo;t port Python 1:1</strong>. Rewrite from scratch with a systems mindset.</li>
+<li><strong>Use <code>zig fmt</code></strong> from day one. Consistency matters in low-level code.</li>
+<li><strong>Read C headers &amp; Zig source</strong>. Much of the ecosystem is built on transparent interop.</li>
+<li><strong>Track Zig releases</strong>. The language evolves quickly; syntax around <code>async</code>, <code>build.zig.zon</code>, and <code>std</code> changes periodically.</li>
+</ul>
+<hr />
+<p><em>Roadmap based on Zig 0.11+. Async/concurrency features remain experimental. Always verify against official docs before production use.</em><br />
+🐍⚡ <em>From backend APIs to frame-perfect games: Zig rewards explicitness, discipline, and curiosity.</em></p>
+        </div>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        The Engineer by Mateusz Pawlikowski - on Python, AI, and software engineering.
+    </div>
+</footer>
+
+<script>
+    function toggleTheme() {
+        const html = document.documentElement;
+        const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        updateThemeBtn();
+    }
+
+    function updateThemeBtn() {
+        const btn = document.querySelector('.btn-theme');
+        if (btn) btn.textContent = document.documentElement.getAttribute('data-theme') === 'dark' ? '☾' : '☀';
+    }
+
+    updateThemeBtn();
+</script>
+
+
+</body>
+</html>
