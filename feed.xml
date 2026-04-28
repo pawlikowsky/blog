@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>The Engineer by Mateusz Pawlikowski — Blog</title>
-  <link href="/feed.xml" rel="self" type="application/atom+xml"/>
-  <link href="/blog/"/>
-  <id>/</id>
+  <link href="https://pawlikowski.me/feed.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://pawlikowski.me/blog/"/>
+  <id>https://pawlikowski.me/</id>
   <updated>2026-04-27T00:00:00Z</updated>
   
   <entry>
     <title>Road To Zig</title>
-    <link href="/blog/road-to-zig/"/>
-    <id>/blog/road-to-zig/</id>
+    <link href="https://pawlikowski.me/blog/road-to-zig/"/>
+    <id>https://pawlikowski.me/blog/road-to-zig/</id>
     <published>2026-04-27T00:00:00Z</published>
     <updated>2026-04-27T00:00:00Z</updated>
     <author><name>M</name></author>
