@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Engineer by Mateusz Pawlikowski - on Python, AI, and software engineering. | Road To Zig</title>
+    <title>The Engineer by Mateusz Pawlikowski | Road To Zig</title>
     <meta name="generator" content="zsbg">
-    <link rel="alternate" type="application/atom+xml" href="https://pawlikowski.me/feed.xml" title="The Engineer by Mateusz Pawlikowski - on Python, AI, and software engineering. — Blog">
+    <link rel="alternate" type="application/atom+xml" href="/feed.xml" title="The Engineer by Mateusz Pawlikowski — Blog">
     
     <meta name="description" content="My Roadmap to Zig">
     <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
     <meta name="author" content="M">
     
-    <link rel="canonical" href="https://pawlikowski.me/road-to-zig/">
+    <link rel="canonical" href="/road-to-zig/">
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Road To Zig">
     <meta property="og:description" content="My Roadmap to Zig">
-    <meta property="og:url" content="https://pawlikowski.me/road-to-zig/">
-    <meta property="og:site_name" content="The Engineer by Mateusz Pawlikowski - on Python, AI, and software engineering.">
+    <meta property="og:url" content="/road-to-zig/">
+    <meta property="og:site_name" content="The Engineer by Mateusz Pawlikowski">
     <meta property="og:locale" content="en_US">
     
     
@@ -28,427 +28,9 @@
     
     
     
-    <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "name": "The Engineer by Mateusz Pawlikowski - on Python, AI, and software engineering.", "url": "https://pawlikowski.me/", "description": "Articles and notes published on The Engineer by Mateusz Pawlikowski - on Python, AI, and software engineering.", "inLanguage": "en-US"}, {"@type": "WebPage", "name": "Road To Zig", "description": "My Roadmap to Zig", "url": "https://pawlikowski.me/road-to-zig/", "inLanguage": "en-US", "author": {"@type": "Person", "name": "M"}, "isPartOf": {"@id": "https://pawlikowski.me/"}}]}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "name": "The Engineer by Mateusz Pawlikowski", "url": "/", "description": "Articles and notes published on The Engineer by Mateusz Pawlikowski.", "inLanguage": "en-US"}, {"@type": "WebPage", "name": "Road To Zig", "description": "My Roadmap to Zig", "url": "/road-to-zig/", "inLanguage": "en-US", "author": {"@type": "Person", "name": "M"}, "isPartOf": {"@id": "/"}}]}</script>
     
-    <style>
-        :root {
-            --bg: #ffffff;
-            --bg-secondary: #f9fafb;
-            --text: #111827;
-            --text-secondary: #6b7280;
-            --text-muted: #9ca3af;
-            --accent: #2563eb;
-            --accent-hover: #1d4ed8;
-            --border: #e5e7eb;
-            --code-bg: #f3f4f6;
-            --code-text: #1f2937;
-            --tag-bg: #f3f4f6;
-            --tag-text: #374151;
-            --tag-accent: #2563eb;
-            --shadow: 0 1px 3px rgba(0,0,0,0.06);
-        }
-
-        html[data-theme="dark"] {
-            --bg: #0f1117;
-            --bg-secondary: #161b22;
-            --text: #e6edf3;
-            --text-secondary: #8b949e;
-            --text-muted: #6e7781;
-            --accent: #58a6ff;
-            --accent-hover: #79b8ff;
-            --border: #21262d;
-            --code-bg: #161b22;
-            --code-text: #e6edf3;
-            --tag-bg: #161b22;
-            --tag-text: #c9d1d9;
-            --tag-accent: #58a6ff;
-            --shadow: 0 1px 3px rgba(0,0,0,0.3);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: var(--bg);
-            color: var(--text);
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            min-height: 100vh;
-            transition: background-color 0.2s, color 0.2s;
-        }
-
-        .container {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* Header */
-        .site-header {
-            padding: 48px 0 32px;
-            margin-bottom: 40px;
-            position: relative;
-        }
-
-        .site-header::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: min(960px, calc(100% - 48px));
-            height: 1px;
-            background: var(--border);
-        }
-
-        .site-header > .container > div:first-child {
-            margin-bottom: 16px;
-        }
-
-        .site-name {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--text);
-            text-decoration: none;
-            letter-spacing: -0.03em;
-        }
-
-        .site-name:hover {
-            color: var(--accent);
-        }
-
-        .site-tagline {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            margin-top: 2px;
-        }
-
-        /* Navbar */
-        .navbar {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .navbar-link {
-            font-size: 0.95rem;
-            color: var(--text);
-            text-decoration: none;
-            transition: color 0.15s;
-            font-weight: 500;
-        }
-
-        .navbar-link:hover {
-            color: var(--accent);
-        }
-
-        .btn-theme {
-            margin-left: auto;
-            background: transparent;
-            border: none;
-            color: var(--text-muted);
-            cursor: pointer;
-            font-size: 1.1rem;
-            padding: 4px;
-            border-radius: 6px;
-            transition: color 0.15s, background-color 0.15s;
-            line-height: 1;
-        }
-
-        .btn-theme:hover {
-            color: var(--text);
-            background-color: var(--bg-secondary);
-        }
-
-        a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: var(--accent-hover);
-        }
-
-        /* Tags */
-        .post-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-        }
-
-        .tag {
-            font-size: 0.75rem;
-            background: var(--tag-bg);
-            border-radius: 4px;
-            padding: 2px 8px;
-            color: var(--tag-text);
-            transition: background-color 0.15s, color 0.15s;
-        }
-
-        .tag::before {
-            content: "#";
-            color: var(--tag-accent);
-            margin-right: 1px;
-        }
-
-        /* Code blocks — always dark background for Monokai colors */
-        .highlight {
-            background: #1e1e2e !important;
-            border-radius: 8px;
-        }
-
-        .highlight pre {
-            background: transparent !important;
-            color: #cdd6f4 !important;
-        }
-
-        .highlight .c, .highlight .cm, .highlight .c1, .highlight .ch, .highlight .cp, .highlight .cpf, .highlight .cs, .highlight .gu { color: #6c7086 !important; }
-        .highlight .k, .highlight .kc, .highlight .kd, .highlight .kp, .highlight .kr, .highlight .kt { color: #cba6f7 !important; }
-        .highlight .s, .highlight .sa, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .se, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss, .highlight .ld { color: #a6e3a1 !important; }
-        .highlight .n, .highlight .nx, .highlight .nb, .highlight .bp, .highlight .py, .highlight .nv, .highlight .ni, .highlight .nl, .highlight .nn, .highlight .w, .highlight .esc, .highlight .g, .highlight .gr, .highlight .gh, .highlight .gs, .highlight .gt { color: #cdd6f4 !important; }
-        .highlight .o, .highlight .ow, .highlight .kn, .highlight .nt, .highlight .gd, .highlight .gp { color: #f38ba8 !important; }
-        .highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .mo, .highlight .l, .highlight .ae { color: #fab387 !important; }
-        .highlight .na, .highlight .nc, .highlight .nd, .highlight .ne, .highlight .nf, .highlight .fm { color: #89b4fa !important; }
-        .highlight .no { color: #89dceb !important; }
-        .highlight .gi { color: #a6e3a1 !important; }
-        .highlight .go { color: #89b4fa !important; }
-        .highlight .hll { background-color: #313244 !important; }
-        .highlight .err { color: #f38ba8 !important; background-color: #311b2e !important; }
-        .highlight .ge { color: #cdd6f4 !important; font-style: italic; }
-        .highlight .ges { color: #cdd6f4 !important; font-weight: bold; font-style: italic; }
-
-        /* Markdown tables */
-        .article-content table,
-        .page-content table {
-            display: block;
-            width: max-content;
-            max-width: 100%;
-            min-width: 100%;
-            margin: 24px 0;
-            overflow-x: auto;
-            border-collapse: collapse;
-            border-spacing: 0;
-            background: var(--bg);
-        }
-
-        .article-content thead,
-        .page-content thead {
-            background: var(--bg-secondary);
-        }
-
-        .article-content th,
-        .article-content td,
-        .page-content th,
-        .page-content td {
-            padding: 12px 16px;
-            border: 1px solid var(--border);
-            text-align: left;
-            vertical-align: top;
-        }
-
-        .article-content th,
-        .page-content th {
-            font-weight: 600;
-        }
-
-        .article-content tbody tr:nth-child(even),
-        .page-content tbody tr:nth-child(even) {
-            background: var(--bg-secondary);
-        }
-
-        /* Markdown task lists */
-        .article-content ul.task-list,
-        .page-content ul.task-list {
-            margin-left: 0;
-            list-style: none;
-        }
-
-        .article-content .task-list-item,
-        .page-content .task-list-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            margin-bottom: 10px;
-        }
-
-        .article-content .task-list-item input[type="checkbox"],
-        .page-content .task-list-item input[type="checkbox"] {
-            appearance: none;
-            -webkit-appearance: none;
-            width: 1rem;
-            height: 1rem;
-            margin: 0.3rem 0 0;
-            border: 1px solid var(--border);
-            border-radius: 0.2rem;
-            background: var(--bg);
-            display: inline-grid;
-            place-content: center;
-            flex: 0 0 auto;
-            opacity: 1;
-        }
-
-        .article-content .task-list-item input[type="checkbox"]::before,
-        .page-content .task-list-item input[type="checkbox"]::before {
-            content: "";
-            width: 0.65rem;
-            height: 0.65rem;
-            transform: scale(0);
-            transition: transform 0.12s ease-in-out;
-            background-color: #16a34a;
-            clip-path: polygon(14% 44%, 0 59%, 41% 100%, 100% 19%, 84% 5%, 39% 62%);
-        }
-
-        .article-content .task-list-item input[type="checkbox"]:checked,
-        .page-content .task-list-item input[type="checkbox"]:checked {
-            border-color: #16a34a;
-            background: color-mix(in srgb, #16a34a 10%, var(--bg));
-        }
-
-        .article-content .task-list-item input[type="checkbox"]:checked::before,
-        .page-content .task-list-item input[type="checkbox"]:checked::before {
-            transform: scale(1);
-        }
-
-        /* Footer */
-        .site-footer {
-            padding: 40px 0;
-            margin-top: 60px;
-            text-align: center;
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            position: relative;
-        }
-
-        .site-footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: min(960px, calc(100% - 48px));
-            height: 1px;
-            background: var(--border);
-        }
-
-        
-        /* Back link */
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 0.875rem;
-            color: var(--text-secondary);
-            margin-bottom: 32px;
-            transition: color 0.15s;
-        }
-
-        .back-link:hover {
-            color: var(--accent);
-        }
-
-        /* Page header */
-        .page-header {
-            margin-bottom: 36px;
-        }
-
-        .page-title {
-            font-size: 2rem;
-            font-weight: 700;
-            letter-spacing: -0.03em;
-            line-height: 1.2;
-        }
-
-        /* Page content */
-        .page-content {
-            font-size: 1rem;
-            line-height: 1.75;
-            color: var(--text);
-        }
-
-        .page-content p {
-            margin-bottom: 20px;
-        }
-
-        .page-content ul,
-        .page-content ol {
-            margin: 0 0 20px 1.5rem;
-            padding: 0;
-        }
-
-        .page-content li {
-            margin-bottom: 6px;
-        }
-
-        .page-content h2 {
-            font-size: 1.4rem;
-            font-weight: 600;
-            letter-spacing: -0.02em;
-            margin: 40px 0 16px;
-        }
-
-        .page-content h3 {
-            font-size: 1.15rem;
-            font-weight: 600;
-            margin: 28px 0 12px;
-        }
-
-        .page-content code {
-            background: var(--code-bg);
-            border-radius: 4px;
-            padding: 2px 6px;
-            font-size: 0.88em;
-            color: var(--code-text);
-            font-family: 'SF Mono', 'Fira Code', monospace;
-        }
-
-        .page-content .highlight {
-            background: var(--code-bg);
-            border-radius: 8px;
-            margin: 24px 0;
-            overflow: hidden;
-        }
-
-        .page-content .highlight pre {
-            padding: 20px;
-            overflow-x: auto;
-            font-size: 0.85rem;
-            line-height: 1.7;
-            margin: 0;
-            background: transparent;
-            white-space: pre;
-        }
-
-        .page-content .highlight code {
-            background: transparent;
-            border: none;
-            padding: 0;
-            font-size: inherit;
-            color: inherit;
-        }
-
-        .page-content blockquote {
-            border-left: 3px solid var(--accent);
-            padding: 12px 20px;
-            margin: 24px 0;
-            background: var(--bg-secondary);
-            color: var(--text-secondary);
-            border-radius: 0 6px 6px 0;
-        }
-
-        .page-content hr {
-            border: none;
-            border-top: 1px solid var(--border);
-            margin: 40px 0;
-        }
-
-        @media (max-width: 600px) {
-            .page-title { font-size: 1.5rem; }
-        }
-
-    </style>
+    <link rel="stylesheet" href="/static/styles.css">
     <link rel="stylesheet" href="/static/pygments.css">
     <script>
         (function() {
@@ -462,8 +44,8 @@
 <header class="site-header">
     <div class="container">
         <div>
-            <a href="/" class="site-name">The Engineer by Mateusz Pawlikowski - on Python, AI, and software engineering.</a>
-            <div class="site-tagline"># Thoughts, rants, and occasional wisdom</div>
+            <a href="/" class="site-name">The Engineer by Mateusz Pawlikowski</a>
+            <div class="site-tagline"># On Python, AI, and software engineering, also thoughts, rants and occasional wisdom.</div>
         </div>
         <nav class="navbar">
             
@@ -909,7 +491,7 @@
 
 <footer class="site-footer">
     <div class="container">
-        The Engineer by Mateusz Pawlikowski - on Python, AI, and software engineering.
+        The Engineer by Mateusz Pawlikowski
     </div>
 </footer>
 
