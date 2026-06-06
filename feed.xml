@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Mateusz Pawlikowski — Blog</title>
+  <link href="https://blog.pawlikowski.me/feed.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://blog.pawlikowski.me/blog/"/>
+  <id>https://blog.pawlikowski.me/</id>
+  <updated>2026-04-27T00:00:00Z</updated>
+  
+  <entry>
+    <title>Road To Zig</title>
+    <link href="https://blog.pawlikowski.me/blog/road-to-zig/"/>
+    <id>https://blog.pawlikowski.me/blog/road-to-zig/</id>
+    <published>2026-04-27T00:00:00Z</published>
+    <updated>2026-04-27T00:00:00Z</updated>
+    <author><name>M</name></author>
+    <summary>My new personal project to learn at least one programming language that is not a pseudo-code language like Python.</summary>
+    <content type="html"><![CDATA[<p>So it happened. I decided to learn some real programming language. My goal is to, in the next 6 months, get some proficiency in the Zig language. Why, Zig? Because why not? It looks like it has a nice community; it&rsquo;s called modern C. Why not Rust? Hmmm, I think Rust is a more mature and bigger language and also has a bigger ecosystem. But I want to try some bare-bones language that will force me to understand some elemental concepts of system-level programming. I don&rsquo;t need memory-safe abstractions.</p>
+<p>In the long term, I would like to utilize Zig skills in some game dev project, including building a custom game engine (2D). This idea has been in my head for some time, so this is addressing the itching.</p>
+<p>Also not saying that Rust will not be welcomed in the future here. Just not for now. </p>
+<p>BTW there is a great inteview with Andrew Kelley, the creator of Zig, where he explains the project&rsquo;s vision, goals and philosophy. I&rsquo;m strongly recommending it.</p>
+<iframe width="1228" height="691" src="https://www.youtube.com/embed/iqddnwKF8HQ" title="Zig 2026: No-AI Policy, $670K Foundation, Left GitHub &amp; Why Zig Isn’t 1.0 - Andrew Kelley Explains" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>]]></content>
+    <category term="zig"/>
+    <category term="roadmap"/>
+    <category term="programming"/>
+    
+  </entry>
+  
+</feed>

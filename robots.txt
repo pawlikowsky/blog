@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://blog.pawlikowski.me/sitemap.xml

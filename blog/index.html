@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mateusz Pawlikowski | Blog</title>
+    <meta name="generator" content="zsbg">
+    <link rel="alternate" type="application/atom+xml" href="https://blog.pawlikowski.me/feed.xml" title="Mateusz Pawlikowski — Blog">
+    
+    <meta name="description" content="Articles and notes published on Mateusz Pawlikowski.">
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+    <meta name="author" content="Mateusz Pawlikowski">
+    
+    <link rel="canonical" href="https://blog.pawlikowski.me/blog/">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mateusz Pawlikowski — Blog">
+    <meta property="og:description" content="Articles and notes published on Mateusz Pawlikowski.">
+    <meta property="og:url" content="https://blog.pawlikowski.me/blog/">
+    <meta property="og:site_name" content="Mateusz Pawlikowski">
+    <meta property="og:locale" content="en_US">
+    
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Mateusz Pawlikowski — Blog">
+    <meta name="twitter:description" content="Articles and notes published on Mateusz Pawlikowski.">
+    
+    
+    
+    <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "name": "Mateusz Pawlikowski", "url": "https://blog.pawlikowski.me/", "description": "Articles and notes published on Mateusz Pawlikowski.", "inLanguage": "en-US"}, {"@type": "Blog", "name": "Mateusz Pawlikowski — Blog", "description": "Articles and notes published on Mateusz Pawlikowski.", "url": "https://blog.pawlikowski.me/blog/", "inLanguage": "en-US", "publisher": {"@type": "Organization", "name": "Mateusz Pawlikowski", "url": "https://blog.pawlikowski.me/"}}]}</script>
+    
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="/static/pygments.css">
+    <script>
+        (function() {
+            const t = localStorage.getItem('theme');
+            if (t) document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <div>
+            <a href="/" class="site-name">Mateusz Pawlikowski</a>
+            <div class="site-tagline"># On Python, AI, and software engineering, also thoughts, rants and occasional wisdom.</div>
+        </div>
+        <nav class="navbar">
+            
+            
+            <a href="/about/" class="navbar-link">About</a>
+            
+            <a href="/road-to-zig/" class="navbar-link">Road To Zig</a>
+            
+            
+            <button class="btn-theme" onclick="toggleTheme()" aria-label="Toggle theme">☀</button>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    
+        <div class="posts-list">
+            
+            <article class="post-card">
+                <a href="/blog/road-to-zig/" class="post-link">
+                    <div class="post-header">
+                        <span class="post-title">Road To Zig</span>
+                        <span class="post-date">2026-04-27</span>
+                    </div>
+                    <p class="post-description">My new personal project to learn at least one programming language that is not a pseudo-code language like Python.</p>
+                </a>
+                <div class="post-tags">
+                    
+                    <span class="tag">zig</span>
+                    
+                    <span class="tag">roadmap</span>
+                    
+                    <span class="tag">programming</span>
+                    
+                </div>
+            </article>
+            
+        </div>
+
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        Mateusz Pawlikowski
+    </div>
+</footer>
+
+<script>
+    function toggleTheme() {
+        const html = document.documentElement;
+        const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        updateThemeBtn();
+    }
+
+    function updateThemeBtn() {
+        const btn = document.querySelector('.btn-theme');
+        if (btn) btn.textContent = document.documentElement.getAttribute('data-theme') === 'dark' ? '☾' : '☀';
+    }
+
+    updateThemeBtn();
+</script>
+
+
+</body>
+</html>

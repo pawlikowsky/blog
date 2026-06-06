@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mateusz Pawlikowski | About</title>
+    <meta name="generator" content="zsbg">
+    <link rel="alternate" type="application/atom+xml" href="https://blog.pawlikowski.me/feed.xml" title="Mateusz Pawlikowski — Blog">
+    
+    <meta name="description" content="A few words about PepeCodes — backend developer, open source enthusiast.">
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+    <meta name="author" content="M">
+    
+    <link rel="canonical" href="https://blog.pawlikowski.me/about/">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="About">
+    <meta property="og:description" content="A few words about PepeCodes — backend developer, open source enthusiast.">
+    <meta property="og:url" content="https://blog.pawlikowski.me/about/">
+    <meta property="og:site_name" content="Mateusz Pawlikowski">
+    <meta property="og:locale" content="en_US">
+    
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="About">
+    <meta name="twitter:description" content="A few words about PepeCodes — backend developer, open source enthusiast.">
+    
+    
+    
+    <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "name": "Mateusz Pawlikowski", "url": "https://blog.pawlikowski.me/", "description": "Articles and notes published on Mateusz Pawlikowski.", "inLanguage": "en-US"}, {"@type": "WebPage", "name": "About", "description": "A few words about PepeCodes — backend developer, open source enthusiast.", "url": "https://blog.pawlikowski.me/about/", "inLanguage": "en-US", "author": {"@type": "Person", "name": "M"}, "isPartOf": {"@id": "https://blog.pawlikowski.me/"}}]}</script>
+    
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="/static/pygments.css">
+    <script>
+        (function() {
+            const t = localStorage.getItem('theme');
+            if (t) document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <div>
+            <a href="/" class="site-name">Mateusz Pawlikowski</a>
+            <div class="site-tagline"># On Python, AI, and software engineering, also thoughts, rants and occasional wisdom.</div>
+        </div>
+        <nav class="navbar">
+            
+            
+            <a href="/about/" class="navbar-link">About</a>
+            
+            <a href="/road-to-zig/" class="navbar-link">Road To Zig</a>
+            
+            
+            <button class="btn-theme" onclick="toggleTheme()" aria-label="Toggle theme">☀</button>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    
+        <a href="/blog/" class="back-link">← Back to blog</a>
+
+        <header class="page-header">
+            <h1 class="page-title">About</h1>
+        </header>
+
+        <div class="page-content">
+            <p><strong>The views and content on this blog are solely my own private thoughts. They should not be associated with any entities or individuals I collaborate with.</strong></p>
+<hr />
+<p>Most of the content on this blog is not AI-generated. <strong>If any part of a post is created using an LLM, I will clearly state that at the beginning.</strong></p>
+<p>I&rsquo;m not an english native so sometimes I&rsquo;m using some AI tools for grammar checking or spelling for example Language Tools.</p>
+<hr />
+<p><strong>Something about me:</strong></p>
+<p>Hi, I&rsquo;m Mateusz. I&rsquo;m living in Poland. On a typical day I&rsquo;m working as a Python backend developer.</p>
+<p>Currently, after almost 10 years in the industry, I&rsquo;m quite bitter about the state of IT. </p>
+<p>If you want to contact with me you can write on:  <code>m@pawlikowski.me</code></p>
+        </div>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        Mateusz Pawlikowski
+    </div>
+</footer>
+
+<script>
+    function toggleTheme() {
+        const html = document.documentElement;
+        const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        updateThemeBtn();
+    }
+
+    function updateThemeBtn() {
+        const btn = document.querySelector('.btn-theme');
+        if (btn) btn.textContent = document.documentElement.getAttribute('data-theme') === 'dark' ? '☾' : '☀';
+    }
+
+    updateThemeBtn();
+</script>
+
+
+</body>
+</html>
